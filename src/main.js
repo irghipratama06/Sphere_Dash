@@ -1,7 +1,7 @@
 import { autoConnect } from '@unicitylabs/sphere-sdk/connect/browser';
 import { SPHERE_NETWORKS } from '@unicitylabs/sphere-sdk/connect';
 const E = import.meta.env;
-const C = { TREASURY: E.VITE_TREASURY || '', PRICE: E.VITE_PRICE || '5', COIN: E.VITE_COIN || 'UCT', TRIES: 20, SPEED: 340 };
+const C = { TREASURY: E.VITE_TREASURY || '', PRICE: '5', AMT: '5000000000000000000', COIN: 'f581d30f593e4b369d684a4563b5246f07b1d265f7178a2c0a82b81f39c24dc0', TRIES: 20, SPEED: 340 };
 const $ = id => document.getElementById(id);
 const cv = $('c'), g = cv.getContext('2d'); let W, H, GY;
 const rs = () => { W = cv.width = innerWidth; H = cv.height = innerHeight; GY = H - 90 }; rs(); addEventListener('resize', rs);
@@ -35,7 +35,7 @@ async function deposit() {
   if (!C.TREASURY) return msg('VITE_TREASURY belum diisi di Vercel.');
   try {
     msg('Konfirmasi di wallet…');
-    await client.intent('send', { to: C.TREASURY, amount: C.PRICE, coinId: C.COIN, memo: 'Unicity Dash 20 tries' });
+        await client.intent('send', { to: C.TREASURY, amount: C.AMT, coinId: C.COIN, memo: 'Unicity Dash 20 tries' });
     setTries(tries + C.TRIES); msg('Deposit berhasil! +20 percobaan'); ui();
   } catch (e) {
     const c = e && e.code;
