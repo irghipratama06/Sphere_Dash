@@ -1,0 +1,1 @@
+{"name":"unicity-dash","private":true,"type":"module","scripts":{"dev":"vite","build":"vite build"},"dependencies":{"@unicitylabs/sphere-sdk":"latest"},"devDependencies":{"vite":"^5.4.0"}}

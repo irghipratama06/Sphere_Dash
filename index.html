@@ -1,0 +1,18 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Unicity Dash</title>
+<style>
+html,body{margin:0;height:100%;background:#000;color:#fff;font-family:system-ui,sans-serif;overflow:hidden;touch-action:manipulation}
+canvas{display:block}
+#hud{position:fixed;top:8px;left:12px;right:12px;display:flex;justify-content:space-between;font-weight:700;pointer-events:none}
+#ov{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:rgba(0,0,0,.82);padding:16px;text-align:center}
+button{background:#ff8a00;color:#000;border:0;border-radius:10px;padding:14px 28px;font-size:18px;font-weight:800}
+#msg{opacity:.85;min-height:20px;max-width:320px}
+#lb{width:min(320px,90%);text-align:left;font-size:14px}
+#lb div{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid #333}
+</style></head><body>
+<canvas id="c"></canvas>
+<div id="hud"><span id="dist">0 m</span><span>Percobaan: <b id="tries">0</b></span></div>
+<div id="ov"><h1 style="margin:0">UNICITY DASH</h1><div id="msg"></div><button id="btn">Connect Wallet</button>
+<div id="lb"><b>🏆 Leaderboard (jarak)</b><div id="rows"></div></div></div>
+<script type="module" src="/src/main.js"></script></body></html>
